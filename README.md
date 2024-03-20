@@ -15,6 +15,7 @@ CDN is a simulation of a content delivery network comprising four main servers: 
 - Should work on Linux distros as well. Depends on what distro you use.
 - No Windows support
 
+
 ## Implementation Details
 
 The application involves four principal actors:
@@ -29,4 +30,11 @@ For more details, refer to the [implementation documentation](https://github.com
 ## Available Commands
 
 - There are no special commands for this project; each server runs as an instance of a process.
-- **Client Usage:** Specify the client's location (en, fr, usa, rus, china), the command (get-text-file, get-image
+- **Client Usage:** Specify the client's location (en, fr, usa, rus, china), the command (get-text-file, get-image-file), and the file path (e.g., `./client en get-text-file ./data.txt`).
+- **CDN-node Usage:** Specify the port. Note: The specified port will be used for the application, and the next port (e.g., if you input 8000, the next port used will be 8001) will be utilized for synchronization.
+- **CDN-manager:** No arguments required; it always runs on port 8080.
+- **Origin Server:** No arguments required; it always runs on port 8001.
+
+## Examples
+
+Refer to the [usage documentation](https://github.com/CirsteanPaul/CDN-system/blob/main/docs/Usage.md) for examples.
